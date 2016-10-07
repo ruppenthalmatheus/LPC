@@ -1,0 +1,6 @@
+D:\Faculdade\STADS\3º Semestre\LPC\Projetos\Aula 02\Ex_Banco\Ex_Banco\bin\Debug\Ex_Banco.exe.config
+D:\Faculdade\STADS\3º Semestre\LPC\Projetos\Aula 02\Ex_Banco\Ex_Banco\bin\Debug\Ex_Banco.exe
+D:\Faculdade\STADS\3º Semestre\LPC\Projetos\Aula 02\Ex_Banco\Ex_Banco\bin\Debug\Ex_Banco.pdb
+D:\Faculdade\STADS\3º Semestre\LPC\Projetos\Aula 02\Ex_Banco\Ex_Banco\obj\Debug\Ex_Banco.csprojResolveAssemblyReference.cache
+D:\Faculdade\STADS\3º Semestre\LPC\Projetos\Aula 02\Ex_Banco\Ex_Banco\obj\Debug\Ex_Banco.exe
+D:\Faculdade\STADS\3º Semestre\LPC\Projetos\Aula 02\Ex_Banco\Ex_Banco\obj\Debug\Ex_Banco.pdb

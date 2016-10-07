@@ -1,0 +1,40 @@
+﻿@model ListPeople.Models.Car
+@{
+    ViewBag.Title = "Edit";
+}
+
+<h2>Edição de Cadastro de Carro</h2>
+
+<form action="/cars/Edit" method="post">
+    <div class="form-horizontinal">
+        <div class="form-group">
+            <label>Id</label>
+            <input class="form-control" type="text" name="id" value="@Model.id"/>
+        </div>
+
+        <div class="form-group">
+            <label>Marca</label>
+            <input class="form-control" type="text" name="marca" value="@Model.marca"/>
+        </div>
+
+        <div class="form-group">
+            <label>Modelo</label>
+            <input class="form-control" type="text" name="modelo" value="@Model.modelo"/>
+        </div>
+
+        <div class="form-group">
+            <label>Ano</label>
+            <input class="form-control" type="text" name="ano" value="@Model.ano" />
+        </div>
+
+        <div class="form-group">
+            <label>Cor</label>
+            <input class="form-control" type="text" name="cor" value="@Model.cor" />
+        </div>
+
+        <div class="form-group">
+            <input class="btn btn-primary" type="submit" name="btnSave" value="Salvar" />
+        </div>
+    </div>
+</form>
+

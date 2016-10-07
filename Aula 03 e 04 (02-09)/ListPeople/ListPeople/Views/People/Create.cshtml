@@ -1,0 +1,29 @@
+﻿@model ListPeople.Models.Person
+@{
+    ViewBag.Title = "Create";
+}
+
+<h2>Cadastro de Pessoa</h2>
+
+<form action="/people/Create" method="post">
+    <div class="form-horizontinal">
+        <div class="form-group">
+            <label>Id</label>
+            <input class="form-control" type="text" name="id"/>
+        </div>
+
+        <div class="form-group">
+            <label>Nome</label>
+            <input class="form-control" type="text" name="name"/>
+        </div>
+
+        <div class="form-group">
+            <label>Idade</label>
+            <input class="form-control" type="text" name="age" />
+        </div>
+
+        <div class="form-group">
+            <input class="btn btn-primary" type="submit" name="btnSave" value="Salvar"/>
+        </div>
+    </div>
+</form>

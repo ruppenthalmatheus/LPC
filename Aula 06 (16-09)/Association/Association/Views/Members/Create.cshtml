@@ -1,0 +1,19 @@
+﻿@model Association.Models.Member
+@{
+    ViewBag.Title = "Create";
+}
+
+<h2>CADASTRO DE PESSOA</h2>
+
+<form action="/members/Create" method="post">
+    <div class="form-horizontinal">
+        <div class="form-group">
+            <label>Nome</label>
+            <input class="form-control" type="text" name="name" />
+        </div>
+
+        <div class="form-group">
+            <input class="btn btn-primary" type="submit" name="btnSave" value="Cadastrar" />
+        </div>
+    </div>
+</form>

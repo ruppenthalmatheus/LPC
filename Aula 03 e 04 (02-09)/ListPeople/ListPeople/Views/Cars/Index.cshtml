@@ -1,0 +1,39 @@
+﻿@model IEnumerable<ListPeople.Models.Car>
+@{
+    ViewBag.Title = "Index";
+}
+
+<h1>Index</h1>
+
+<h2>Carros</h2>
+
+<a href="/cars/Create" class="btn btn-default">Novo Carro</a>
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>Id</th>
+            <th>Marca</th>
+            <th>Modelo</th>
+            <th>Ano</th>
+            <th>Cor</th>
+        <tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>@item.id</td>
+                <td>@item.marca</td>
+                <td>@item.modelo</td>
+                <td>@item.ano</td>
+                <td>@item.cor</td>
+                <td>
+                    <a href="/cars/Edit/@item.id" class="btn btn-primary">Editar</a>
+                    <a href="/cars/Delete/@item.id" class="btn btn-danger">Excluir</a>
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>
+

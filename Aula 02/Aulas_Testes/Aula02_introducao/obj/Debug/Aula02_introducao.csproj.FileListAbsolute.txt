@@ -1,0 +1,12 @@
+D:\Faculdade\Análise e Desenvolvimento de Sistemas\3º Semestre\Paradigmas de Linguagem de Programação\Projetos\Aula 02\Aulas_Testes\Aula02_introducao\bin\Debug\Aula02_introducao.exe.config
+D:\Faculdade\Análise e Desenvolvimento de Sistemas\3º Semestre\Paradigmas de Linguagem de Programação\Projetos\Aula 02\Aulas_Testes\Aula02_introducao\bin\Debug\Aula02_introducao.exe
+D:\Faculdade\Análise e Desenvolvimento de Sistemas\3º Semestre\Paradigmas de Linguagem de Programação\Projetos\Aula 02\Aulas_Testes\Aula02_introducao\bin\Debug\Aula02_introducao.pdb
+D:\Faculdade\Análise e Desenvolvimento de Sistemas\3º Semestre\Paradigmas de Linguagem de Programação\Projetos\Aula 02\Aulas_Testes\Aula02_introducao\obj\Debug\Aula02_introducao.csprojResolveAssemblyReference.cache
+D:\Faculdade\Análise e Desenvolvimento de Sistemas\3º Semestre\Paradigmas de Linguagem de Programação\Projetos\Aula 02\Aulas_Testes\Aula02_introducao\obj\Debug\Aula02_introducao.exe
+D:\Faculdade\Análise e Desenvolvimento de Sistemas\3º Semestre\Paradigmas de Linguagem de Programação\Projetos\Aula 02\Aulas_Testes\Aula02_introducao\obj\Debug\Aula02_introducao.pdb
+D:\Faculdade\Análise e Desenvolvimento de Sistemas\3º Semestre\Linguagem de Programação Comercial\Projetos\Aula 02\Aulas_Testes\Aula02_introducao\bin\Debug\Aula02_introducao.exe.config
+D:\Faculdade\Análise e Desenvolvimento de Sistemas\3º Semestre\Linguagem de Programação Comercial\Projetos\Aula 02\Aulas_Testes\Aula02_introducao\obj\Debug\Aula02_introducao.exe
+D:\Faculdade\Análise e Desenvolvimento de Sistemas\3º Semestre\Linguagem de Programação Comercial\Projetos\Aula 02\Aulas_Testes\Aula02_introducao\obj\Debug\Aula02_introducao.pdb
+D:\Faculdade\STADS\3º Semestre\LPC\Projetos\Aula 02\Aulas_Testes\Aula02_introducao\bin\Debug\Aula02_introducao.exe.config
+D:\Faculdade\STADS\3º Semestre\LPC\Projetos\Aula 02\Aulas_Testes\Aula02_introducao\obj\Debug\Aula02_introducao.exe
+D:\Faculdade\STADS\3º Semestre\LPC\Projetos\Aula 02\Aulas_Testes\Aula02_introducao\obj\Debug\Aula02_introducao.pdb

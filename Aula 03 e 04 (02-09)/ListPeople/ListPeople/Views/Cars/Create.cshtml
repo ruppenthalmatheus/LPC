@@ -1,0 +1,39 @@
+﻿@model ListPeople.Models.Car
+@{
+    ViewBag.Title = "Create";
+}
+
+<h2>Cadastro de Carro</h2>
+
+<form action="/cars/Create" method="post">
+    <div class="form-horizontinal">
+        <div class="form-group">
+            <label>Id</label>
+            <input class="form-control" type="text" name="id"/>
+        </div>
+
+        <div class="form-group">
+            <label>Marca</label>
+            <input class="form-control" type="text" name="marca"/>
+        </div>
+
+        <div class="form-group">
+            <label>Modelo</label>
+            <input class="form-control" type="text" name="modelo" />
+        </div>
+
+        <div class="form-group">
+            <label>Ano</label>
+            <input class="form-control" type="text" name="ano" />
+        </div>
+
+        <div class="form-group">
+            <label>Cor</label>
+            <input class="form-control" type="text" name="cor" />
+        </div>
+
+        <div class="form-group">
+            <input class="btn btn-primary" type="submit" name="btnSave" value="Salvar"/>
+        </div>
+    </div>
+</form>

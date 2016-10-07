@@ -1,0 +1,25 @@
+﻿@model Association.Models.Member
+@{
+    ViewBag.Title = "Edit";
+}
+
+<h2>Editar Membro</h2>
+
+<form action="/members/Update" method="post">
+    <div class="form-horizontinal">
+        <div class="form-group">
+            <label>Id</label>
+            <input class="form-control" type="text" readonly name="id" value="@Model.id" />
+        </div>
+
+        <div class="form-group">
+            <label>Marca</label>
+            <input class="form-control" type="text" name="name" value="@Model.name" />
+        </div>
+
+        <div class="form-group">
+            <input class="btn btn-primary" type="submit" name="btnSave" value="Salvar alteração" />
+        </div>
+    </div>
+</form>
+

@@ -1,0 +1,33 @@
+﻿@model IEnumerable<Association.Models.Member>
+@{
+    ViewBag.Title = "Index";
+}
+
+<h1>PÁGINA INICIAL</h1>
+
+<h2>Membros</h2>
+
+<a href="/members/Create" class="btn btn-default">Cadastrar Membro</a>
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>Código do Membro</th>
+            <th>Nome</th>
+        <tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>@item.id</td>
+                <td>@item.name</td>
+                <td>
+                    <a href="/members/Edit/@item.id" class="btn btn-primary">Editar</a>
+                    <a href="/members/Delete/@item.id" class="btn btn-danger">Excluir</a>
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>
+
