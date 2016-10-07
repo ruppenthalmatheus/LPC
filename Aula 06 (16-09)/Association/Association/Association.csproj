@@ -140,10 +140,13 @@
   <ItemGroup>
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="Connection\FioTerra.cs" />
+    <Compile Include="Controllers\CitiesController.cs" />
     <Compile Include="Controllers\MembersController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
+    <Compile Include="Models\City.cs" />
+    <Compile Include="Models\CityRepository.cs" />
     <Compile Include="Models\Member.cs" />
     <Compile Include="Models\MemberRepository.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -163,6 +166,9 @@
     <Content Include="scripts\jquery-1.10.2.min.map" />
     <Content Include="Views\Members\Create.cshtml" />
     <Content Include="Views\Members\Edit.cshtml" />
+    <Content Include="Views\Cities\Index.cshtml" />
+    <Content Include="Views\Cities\Create.cshtml" />
+    <Content Include="Views\Cities\Edit.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>

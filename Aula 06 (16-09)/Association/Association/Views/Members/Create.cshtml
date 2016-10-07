@@ -3,7 +3,7 @@
     ViewBag.Title = "Create";
 }
 
-<h2>CADASTRO DE PESSOA</h2>
+<h2>CADASTRO DE MEMBRO</h2>
 
 <form action="/members/Create" method="post">
     <div class="form-horizontinal">
@@ -12,6 +12,17 @@
             <input class="form-control" type="text" name="name" />
         </div>
 
+        <div class="form-group">
+            <label>Cidade</label>
+            <select class="form-control" name="city.id">
+                <option>Selecione uma cidade</option>
+                @foreach (Association.Models.City c in @ViewBag.Cities)
+                {
+                    <option value="@c.id">@c.name</option> 
+                }
+            </select>
+        </div>
+        
         <div class="form-group">
             <input class="btn btn-primary" type="submit" name="btnSave" value="Cadastrar" />
         </div>

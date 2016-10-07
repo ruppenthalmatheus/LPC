@@ -1,7 +1,4 @@
 ﻿@model IEnumerable<Association.Models.Member>
-@{
-    ViewBag.Title = "Index";
-}
 
 <h1>PÁGINA INICIAL</h1>
 
@@ -14,6 +11,7 @@
         <tr>
             <th>Código do Membro</th>
             <th>Nome</th>
+            <th>Cidade</th>
         <tr>
     </thead>
     <tbody>
@@ -22,6 +20,7 @@
             <tr>
                 <td>@item.id</td>
                 <td>@item.name</td>
+                <td>@item.city.name</td>
                 <td>
                     <a href="/members/Edit/@item.id" class="btn btn-primary">Editar</a>
                     <a href="/members/Delete/@item.id" class="btn btn-danger">Excluir</a>

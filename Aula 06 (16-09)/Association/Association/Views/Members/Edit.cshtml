@@ -3,7 +3,7 @@
     ViewBag.Title = "Edit";
 }
 
-<h2>Editar Membro</h2>
+<h2>EDITAR MEMBRO</h2>
 
 <form action="/members/Update" method="post">
     <div class="form-horizontinal">
@@ -13,13 +13,23 @@
         </div>
 
         <div class="form-group">
-            <label>Marca</label>
-            <input class="form-control" type="text" name="name" value="@Model.name" />
+            <label>Nome</label>
+            <input class="form-control" type="text" name="name" value="@Model.name"/>
         </div>
 
         <div class="form-group">
-            <input class="btn btn-primary" type="submit" name="btnSave" value="Salvar alteração" />
+            <label>Cidade</label>
+            <select class="form-control" name="city.id">
+                @foreach (var c in @ViewBag.Cities)
+                {
+                    <option value="@c.id" @(Model.city.id == c.id ? "selected" : "")>@c.name</option>
+                }
+
+            </select>
+        </div>
+
+        <div class="form-group">
+            <input class="btn btn-primary" type="submit" name="btnSave" value="Salvar" />
         </div>
     </div>
 </form>
-
