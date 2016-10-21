@@ -1,0 +1,35 @@
+﻿body {
+    padding-top: 50px;
+    padding-bottom: 20px;
+    background: linear-gradient(white, #cecece) fixed no-repeat !important;
+    background-size: cover !important;
+}
+
+/* Set padding to keep content from hitting the edges */
+.body-content {
+    padding-left: 15px;
+    padding-right: 15px;
+}
+
+/* Set width on the form input elements since they're 100% wide by default */
+input,
+select,
+textarea {
+    max-width: 280px;
+}
+
+div.content {
+    background-color: white !important;
+    padding: 20px !important;
+    box-shadow: 5px 5px 20px #888888 !important;
+}
+
+h2 {
+    text-align: center !important;
+    font-variant: small-caps !important;
+    font-weight: bold !important;
+    text-shadow: 2px 2px 5px #888888;   
+}
+
+
+

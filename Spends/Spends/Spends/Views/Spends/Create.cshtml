@@ -1,0 +1,62 @@
+﻿@model Spends.Models.Spend
+@{
+    ViewBag.Title = "Nova Despesa | SCD - Sistema de Controle de Despesas";
+}
+
+<br />
+
+<center><img src="~/Content/Logo.png" /></center>
+
+<br />
+
+<div class="content">
+    <h2>Nova Despesa</h2>
+
+    <br />
+
+    <form action="/spends/Create" method="post">
+        <div class="form-horizontinal">
+
+            <div class="form-group">
+                <label>Categoria*</label>
+                <select class="form-control" required="required" name="category.idCategory">
+                    <option>Selecione uma categoria</option>
+                    @foreach (Spends.Models.Category c in @ViewBag.Categories)
+                    {
+                        <option value="@c.idCategory">@c.name</option>
+                    }
+                </select>
+            </div>
+
+            <div class="form-group">
+                <label>Lugar*</label>
+                <select class="form-control" required="required" name="location.idLocation">
+                    <option>Selecione um lugar</option>
+                    @foreach (Spends.Models.Location l in @ViewBag.Locations)
+                    {
+                        <option value="@l.idLocation">@l.description</option>
+                    }
+                </select>
+            </div>
+
+            <div class="form-group">
+                <label>Data*</label>
+                <input type="date" class="form-control" required="required" name="spendDate">
+            </div>
+
+            <div class="form-group">
+                <label>Total gasto (R$)*</label>
+                <input class="form-control" type="text" required="required" name="total" />
+            </div>
+            <br />
+            <p>* Campos obrigatórios</p>
+            <br />
+            <br />
+
+            <div class="form-group">
+                <button class="btn btn-success">Cadastrar&nbsp;<i class="glyphicon glyphicon-ok"></i></button>
+            </div>
+
+        </div>
+    </form>
+</div>

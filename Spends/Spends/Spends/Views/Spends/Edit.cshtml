@@ -1,0 +1,65 @@
+﻿@model Spends.Models.Spend
+@{
+    ViewBag.Title = "Editar Despesa | SCD - Sistema de Controle de Despesas";
+}
+
+<br />
+
+<center><img src="~/Content/Logo.png" /></center>
+
+<br />
+
+<div class="content">
+    <center><h2>Editar Despesa</h2></center>
+
+    <br />
+
+    <form action="/spends/Update" method="post">
+        <div class="form-horizontinal">
+
+            <div class="form-group">
+                <label>Código da Despesa</label>
+                <input class="form-control" type="text" readonly name="idSpend" value="@Model.idSpend" />
+            </div>
+
+            <div class="form-group">
+                <label>Categoria*</label>
+                <select class="form-control" required="required" name="Category.idCategory">
+                    @foreach (var c in @ViewBag.Categories)
+                    {
+                        <option value="@c.idCategory" @(Model.category.idCategory == c.idCategory ? "selected" : "")>@c.name</option>
+                    }
+                </select>
+            </div>
+
+            <div class="form-group">
+                <label>Lugar*</label>
+                <select class="form-control" required="required" name="Location.idLocation">
+                    @foreach (var l in @ViewBag.Locations)
+                    {
+                        <option value="@l.idLocation" @(Model.location.idLocation == l.idLocation ? "selected" : "")>@l.description</option>
+                    }
+                </select>
+            </div>
+
+            <div class="form-group">
+                <label>Data*</label>
+                <input class="form-control" type="date" required="required" name="spendDate" value="@Model.spendDate.ToString("yyyy-MM-dd")" />
+            </div>
+
+            <div class="form-group">
+                <label>Total Gasto (R$)*</label>
+                <input class="form-control" type="text" required="required" name="total" value="@Model.total" />
+            </div>
+            <br />
+            <p>* Campos obrigatórios</p>
+            <br />
+            <br />
+
+            <div class="form-group">
+                <button class="btn btn-success">Salvar alterações&nbsp; &nbsp;<i class="glyphicon glyphicon-floppy-save"></i></button>
+            </div>
+
+        </div>
+    </form>
+</div>

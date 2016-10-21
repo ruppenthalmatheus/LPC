@@ -1,0 +1,38 @@
+﻿@model Spends.Models.Category
+@{
+    ViewBag.Title = "Editar Categoria | SCD - Sistema de Controle de Despesas";
+}
+
+<br />
+
+<center><img src="~/Content/Logo.png" /></center>
+
+<br />
+
+<div class="content">
+    <h2>Editar Categoria</h2>
+
+    <form action="/categories/Update" method="post">
+        <div class="form-horizontinal">
+
+            <div class="form-group">
+                <label>Código da Categoria</label>
+                <input class="form-control" type="text" readonly name="idCategory" value="@Model.idCategory" />
+            </div>
+
+            <div class="form-group">
+                <label>Nome da Categoria*</label>
+                <input class="form-control" type="text" name="name" required="required" value="@Model.name" />
+            </div>
+            <br />
+            <p>* Campos obrigatórios</p>
+            <br />
+            <br />
+
+            <div class="form-group">
+                <button class="btn btn-success">Salvar alterações&nbsp; &nbsp;<i class="glyphicon glyphicon-floppy-save"></i></button>
+            </div>
+
+        </div>
+    </form>
+</div>

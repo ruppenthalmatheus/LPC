@@ -1,0 +1,38 @@
+﻿@model Spends.Models.Location
+@{
+    ViewBag.Title = "Editar Lugar | SCD - Sistema de Controle de Despesas";
+}
+
+<br />
+
+<center><img src="~/Content/Logo.png" /></center>
+
+<br />
+
+<div class="content">
+    <h2>Editar Lugar</h2>
+
+    <form action="/locations/Update" method="post">
+        <div class="form-horizontinal">
+
+            <div class="form-group">
+                <label>Código do Lugar</label>
+                <input class="form-control" type="text" readonly name="idLocation" value="@Model.idLocation" />
+            </div>
+
+            <div class="form-group">
+                <label>Descrição*</label>
+                <input class="form-control" type="text" required="required" name="description" value="@Model.description" />
+            </div>
+            <br />
+            <p>* Campos obrigatórios</p>
+            <br />
+            <br />
+
+            <div class="form-group">
+                <button class="btn btn-success">Salvar alterações&nbsp; &nbsp;<i class="glyphicon glyphicon-floppy-save"></i></button>
+            </div>
+
+        </div>
+    </form>
+</div>

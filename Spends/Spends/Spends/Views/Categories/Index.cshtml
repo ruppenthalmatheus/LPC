@@ -1,0 +1,51 @@
+﻿@model IEnumerable<Spends.Models.Category>
+@{
+    ViewBag.Title = "Categorias | SCD - Sistema de Controle de Despesas";
+}
+
+<br />
+
+<center><img src="~/Content/Logo.png" /></center>
+
+<br />
+
+<div class="content">
+    <h2>Categorias</h2>
+
+    <br />
+
+    <a href="/categories/Create" class="btn btn-success">
+        Nova Categoria  <span class="glyphicon glyphicon-plus"></span>
+    </a>
+
+    <br />
+    <br />
+
+    <table class="table table-striped">
+        <thead>
+            <tr>
+                <th>Código</th>
+                <th>Nome</th>
+            <tr>
+        </thead>
+        <tbody>
+            @foreach (var item in Model)
+            {
+                <tr>
+                    <td>@item.idCategory</td>
+                    <td>@item.name</td>
+                    <td>
+                        <a href="/categories/Edit/@item.idCategory" class="btn btn-primary btn-xs">
+                            Editar  <span class="glyphicon glyphicon-pencil"></span>
+                        </a>
+                        <a href="/categories/Delete/@item.idCategory" class="btn btn-danger btn-xs">
+                            Excluir  <span class="glyphicon glyphicon-trash"></span>
+                        </a>
+                    </td>
+                </tr>
+            }
+        </tbody>
+    </table>
+</div>
+
+

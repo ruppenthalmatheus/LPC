@@ -1,0 +1,49 @@
+﻿@model IEnumerable<Spends.Models.Location>
+@{
+    ViewBag.Title = "Lugares | SCD - Sistema de Controle de Despesas";
+}
+
+<br />
+
+<center><img src="~/Content/Logo.png" /></center>
+
+<br />
+
+<div class="content">
+    <h2>Lugares</h2>
+
+    <br />
+
+    <a href="/locations/Create" class="btn btn-success">
+        Novo Lugar  <span class="glyphicon glyphicon-plus"></span>
+    </a>
+
+    <br />
+    <br />
+
+    <table class="table table-striped">
+        <thead>
+            <tr>
+                <th>Código</th>
+                <th>Descrição</th>
+            <tr>
+        </thead>
+        <tbody>
+            @foreach (var item in Model)
+            {
+                <tr>
+                    <td>@item.idLocation</td>
+                    <td>@item.description</td>
+                    <td>
+                        <a href="/locations/Edit/@item.idLocation" class="btn btn-primary btn-xs">
+                            Editar  <span class="glyphicon glyphicon-pencil"></span>
+                        </a>
+                        <a href="/locations/Delete/@item.idLocation" class="btn btn-danger btn-xs">
+                            Excluir  <span class="glyphicon glyphicon-trash"></span>
+                        </a>
+                    </td>
+                </tr>
+            }
+        </tbody>
+    </table>
+</div>

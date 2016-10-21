@@ -1,0 +1,80 @@
+﻿@model IEnumerable<Spends.Models.Spend>
+@{
+    ViewBag.Title = "Despesas por período | SCD - Sistema de Controle de Despesas";
+}
+<br />
+
+<center><img src="~/Content/Logo.png" /></center>
+
+<br />
+
+<div class="content">
+    <h2>Despesas por período</h2>
+
+    <br />
+
+    <table class="table table-striped">
+        <thead>
+            <tr>
+                <th>Código</th>
+                <th>O que é</th>
+                <th>Onde</th>
+                <th>Data</th>
+                <th>Total Gasto (R$)</th>
+            <tr>
+        </thead>
+        <tbody>
+            @foreach (var item in Model)
+            {
+                <tr>
+                    <td>@item.idSpend</td>
+                    <td>@item.category.name</td>
+                    <td>@item.location.description</td>
+                    <td>@item.spendDate.ToShortDateString()</td>
+                    <td>@item.total</td>
+                    <td>
+                        <a href="/spends/Edit/@item.idSpend" class="btn btn-primary btn-xs">
+                            Editar <span class="glyphicon glyphicon-pencil"></span>
+                        </a>
+                        <a href="/spends/Delete/@item.idSpend" class="btn btn-danger btn-xs">
+                            Excluir <span class="glyphicon glyphicon-trash"></span>
+                        </a>
+                    </td>
+                </tr>
+            }
+        </tbody>
+    </table>
+</div>
+
+<br />
+
+<div class="content">
+    <h2>Gerar novo relatório</h2>
+
+    <br />
+
+    <form action="/spends/spendsByPeriod" method="post">
+        <table class="table table-striped">
+            <thead>
+                <tr>
+                    <th>De</th>
+                    <th>Até</th>
+                    <th></th>
+                <tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>
+                        <input type="date" class="form-control" name="pStartDate">
+                    </td>
+                    <td>
+                        <input type="date" class="form-control" name="pFinalDate">
+                    </td>
+                    <td>
+                        <button class="btn btn-primary">Gerar&nbsp;<i class="glyphicon glyphicon-list-alt"></i></button>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </form>
+</div>

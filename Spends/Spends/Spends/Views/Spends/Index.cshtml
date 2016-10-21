@@ -1,0 +1,176 @@
+﻿@model IEnumerable<Spends.Models.Spend>
+@{
+    ViewBag.Title = "Despesas | SCD - Sistema de Controle de Despesas";
+}
+<br />
+
+<center><img src="~/Content/Logo.png" /></center>
+
+<br />
+
+<div class="content">
+    <h2>Despesas</h2>
+
+    <br />
+
+    <a href="/spends/Create" class="btn btn-success">
+        Nova Despesa  <span class="glyphicon glyphicon-plus"></span>
+    </a>
+
+    <br />
+    <br />
+
+    <table class="table table-striped">
+        <thead>
+            <tr>
+                <th>Código</th>
+                <th>O que é</th>
+                <th>Onde</th>
+                <th>Data</th>
+                <th>Total Gasto (R$)</th>
+            <tr>
+        </thead>
+        <tbody>
+            @foreach (var item in Model)
+            {
+                <tr>
+                    <td>@item.idSpend</td>
+                    <td>@item.category.name</td>
+                    <td>@item.location.description</td>
+                    <td>@item.spendDate.ToShortDateString()</td>
+                    <td>@item.total</td>
+                    <td>
+                        <a href="/spends/Edit/@item.idSpend" class="btn btn-primary btn-xs">
+                            Editar  <span class="glyphicon glyphicon-pencil"></span>
+                        </a>
+                        <a href="/spends/Delete/@item.idSpend" class="btn btn-danger btn-xs">
+                            Excluir  <span class="glyphicon glyphicon-trash"></span>
+                        </a>
+                    </td>
+                </tr>
+            }
+        </tbody>
+    </table>
+
+    <br />
+    <br />
+</div>
+
+<br />
+
+<div class="content">
+    <h2>Despesas por período</h2>
+
+    <br />
+
+    <form action="/spends/spendsByPeriod" method="post">
+        <table class="table table-striped">
+            <thead>
+                <tr>
+                    <th>De</th>
+                    <th>Até</th>
+                    <th></th>
+                <tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>
+                        <input type="date" class="form-control" name="pStartDate">
+                    </td>
+                    <td>
+                        <input type="date" class="form-control" name="pFinalDate">
+                    </td>
+                    <td>
+                        <button class="btn btn-primary">Gerar&nbsp;<i class="glyphicon glyphicon-list-alt"></i></button>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+   </form>
+</div>
+
+<br />
+
+<div class="content">
+    <h2>Despesas por categoria e período</h2>
+
+    <br />
+
+    <form action="/spends/spendsCategoryByPeriod" method="post">
+        <table class="table table-striped">
+            <thead>
+                <tr>
+                    <th>De</th>
+                    <th>Até</th>
+                    <th>Categoria</th>
+                    <th></th>
+                <tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>
+                        <input type="date" class="form-control" name="pStartDate">
+                    </td>
+                    <td>
+                        <input type="date" class="form-control" name="pFinalDate">
+                    </td>
+                    <td>
+                        <select class="form-control" name="id">
+                            <option>Selecione uma categoria</option>
+                            @foreach (Spends.Models.Category c in @ViewBag.Categories)
+                            {
+                                <option value="@c.idCategory">@c.name</option>
+                            }
+                        </select>
+                    </td>
+                    <td>
+                        <button class="btn btn-primary">Gerar&nbsp;<i class="glyphicon glyphicon-list-alt"></i></button>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </form>
+</div>
+ 
+<br />
+
+<div class="content">
+    <h2>Despesas por lugar e período</h2>
+
+    <br />
+
+    <form action="/spends/spendsLocationByPeriod" method="post">
+        <table class="table table-striped">
+            <thead>
+                <tr>
+                    <th>De</th>
+                    <th>Até</th>
+                    <th>Lugar</th>
+                    <th></th>
+                <tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>
+                        <input type="date" class="form-control" name="pStartDate">
+                    </td>
+                    <td>
+                        <input type="date" class="form-control" name="pFinalDate">
+                    </td>
+                    <td>
+                        <select class="form-control" name="id">
+                            <option>Selecione um Lugar</option>
+                            @foreach (Spends.Models.Location l in @ViewBag.Locations)
+                            {
+                                <option value="@l.idLocation">@l.description</option>
+                            }
+                        </select>
+                    </td>
+                    <td>
+                        <button class="btn btn-primary">Gerar&nbsp;<i class="glyphicon glyphicon-list-alt"></i></button>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </form>
+</div>
